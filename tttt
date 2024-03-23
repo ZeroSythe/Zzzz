@@ -1,0 +1,38 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include <locale.h>
+#include <string>
+#include <string.h>
+#include <math.h>
+#include <fstream>
+
+
+
+using namespace std;
+#pragma warning (disable:4996)
+
+struct ogrenci {
+	string ad, soyad;
+	int o_not;
+};
+
+
+int main() {
+	ofstream ogr;
+	string satir;
+	ogrenci kisi;
+	cout << "ogrenci adı : ";
+	cin >> kisi.ad;
+	cout << "ogrenci soyad : ";
+	cin >> kisi.soyad;
+	cout << "ogrenci not : ";
+	cin >> kisi.o_not;
+
+	ogr.open("ogrenci.txt");
+	ogr << "ogrenci adi " << kisi.ad << "ogrenci soyadi :" << kisi.soyad << "ogrenci not :" << kisi.o_not;
+
+
+}
+
