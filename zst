@@ -1,0 +1,64 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+#pragma warning (disable:4996)
+using namespace std;
+
+struct ogrenci
+{
+	string ad, soyad;
+	int no, yas;
+
+};
+struct ders
+{
+	string ders_adi, ders_kodu, ders_ogrt, kredisayisi;
+};
+
+int main() {
+	ogrenci kisi[3];
+	ders ss[3];
+
+	for (int i = 1; i < 3; i++)
+	{
+		cout << i << ".isminizi giriniz\n--> ";
+		cin >> kisi[i].ad;
+		cout << i << ".soyadinizi giriniz\n--> ";
+		cin >> kisi[i].soyad;
+		cout << i << ".Nosunu giriniz\n--> ";
+		cin >> kisi[i].no;
+		cout << i << ".yasinizi giriniz\n--> ";
+		cin >> kisi[i].yas;
+		cout << endl << endl;
+	
+		cout << "dersin adini giriniz\n--> ";
+		cin >> ss[i].ders_adi;
+		cout << "dersin kodunu giriniz\n--> ";
+		cin >> ss[i].ders_kodu;
+		cout << "ders ogretmenini giriniz\n--> ";
+		cin >> ss[i].ders_ogrt;
+		cout << "kredi sayisini giriniz\n--> ";
+		cin >> ss[i].kredisayisi;
+		cout << endl;
+	}
+
+	for (int i = 1; i < 3; i++)
+	{
+		cout << i << ".kisinin bilgileri :" << endl;
+		cout << kisi[i].ad << endl << kisi[i].soyad << endl << kisi[i].no << endl << kisi[i].yas;
+		cout << endl << endl;
+	}
+	for (int i = 1; i < 3; i++)
+	{
+		cout << i << ".kisinin bilgileri :" << endl;
+		cout << ss[i].ders_adi << endl << ss[i].ders_kodu << endl << ss[i].ders_ogrt << endl << ss[i].kredisayisi;
+		cout << endl << endl;
+	}
+
+
+	return 0;
+}
