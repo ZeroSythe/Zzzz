@@ -1,0 +1,34 @@
+#include <iostream>
+#include <ctime>
+#include <windows.h>
+#include <stdio.h>
+#include <locale.h>
+#include <string>
+#include <math.h>
+#include <fstream>
+
+
+
+using namespace std;
+#pragma warning (disable:4996)
+
+int main() {
+	
+	int s1;
+	ifstream ssy;
+	ofstream d1;
+	ofstream d2;
+	ssy.open("deneme.txt");
+	d2.open("cift.txt");
+	d1.open("tek.txt");
+	while (ssy >> s1) {
+		if (s1 % 2 == 0) {
+			d2 << s1 << " ";
+		}
+		else {
+			d1 << s1 << " ";
+		}
+	}
+	return 0;
+
+}
